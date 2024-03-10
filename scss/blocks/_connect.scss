@@ -1,0 +1,352 @@
+@use "../mixins" as mx;
+
+@media only screen {
+  .connect__wrapper {
+    @include mx.flexbox(column, start, center);
+  }
+
+  .step {
+    @include mx.flexbox(column, center, center);
+    max-width: 950px;
+    width: 100%;
+    padding-bottom: 191px;
+    margin: 0 auto;
+    
+  }
+
+  .step__id {
+    @include mx.typography(
+      inherit,
+      600,
+      25px,
+      152%,
+      center,
+      var(--secondary-active-color)
+    );
+  }
+
+  .step__title {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      600,
+      75px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .step__desc-wrapper {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .step__desc {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      400,
+      30px,
+      150%,
+      center,
+      var(--secondary-text-color)
+    );
+  }
+
+  .step__btn {
+    width: 313px;
+    padding: 24px;
+    @include mx.typography(
+      inherit,
+      500,
+      20px,
+      150%,
+      center,
+      var(--secondary-text-color)
+    );
+    border-radius: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--secondary-text-color);
+  }
+
+  .step-odd {
+    width: 100%;
+    @include mx.flexbox(column, start, start);
+    padding-left: 43px;
+    padding-bottom: 189px;
+    gap: 80px;
+    background: url("../../images/png/section1bg.png") no-repeat calc(50% + 500px) calc(-8px);
+    background-size: 820px 715px;
+  }
+
+  .step-odd__info {
+    @include mx.typography(
+      inherit,
+      500,
+      30px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .step-odd__title-wrapper {
+    max-width: 550px;
+    width: 100%;
+  }
+
+  .step-odd__title {
+    margin-top: 0;
+    margin-bottom: 27px;
+    @include mx.typography(
+      inherit,
+      600,
+      75px,
+      150%,
+      start,
+      var(--main-text-color)
+    );
+  }
+
+  .step-odd__title-span {
+    color: var(--main-active-color);
+  }
+
+  .step-odd__list {
+    @include mx.list-unstyled;
+    @include mx.flexbox(column, start, start);
+    gap: 13px;
+    margin-bottom: 66px;
+  }
+
+  .step-odd__item {
+    @include mx.flexbox(row, center, center);
+    gap: 12px;
+    @include mx.typography(
+      inherit,
+      400,
+      23px,
+      148%,
+      start,
+      var(--main-text-color)
+    );
+
+    &::before {
+      @include mx.flexbox(row, center, center);
+      width: 33px;
+      height: 33px;
+      padding-top: 5px;
+      border-radius: 50%;
+      background-color: var(--secondary-bg);
+      @include mx.typography(
+        inherit,
+        500,
+        18px,
+        150%,
+        start,
+        var(--main-text-color)
+      );
+    }
+
+    &:first-child::before {
+      content: "1";
+    }
+
+    &:nth-child(2)::before {
+      content: "2";
+    }
+  }
+
+  .step-odd__btn-wrapper {
+    @include mx.flexbox(row, stretch, start);
+    gap: 24px;
+  }
+
+  .step-odd__btn {
+    width: 207px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    @include mx.typography(
+      inherit,
+      500,
+      20px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+    border-radius: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .step-get-started-btn {
+    background-color: var(--main-active-color);
+  }
+
+  .step-view-demo-btn {
+    color: var(--secondary-text-color);
+    background-color: transparent;
+    border-color: var(--secondary-text-color);
+  }
+
+  .step--second {
+    padding-bottom: 90px;
+  }
+
+  .step--second .step__desc-wrapper {
+    margin-bottom: 0;
+  }
+
+  .step-two {
+    width: 100%;
+    @include mx.flexbox(column, center, center);
+    gap: 23px;
+    padding-bottom: 275px;
+  }
+
+  .step-two__wrapper {
+    width: 100%;
+    @include mx.flexbox(row, stretch, center);
+    gap: 23px;
+    margin-bottom: 49px;
+  }
+
+  .step-two__link {
+    position: relative;
+    min-width: 854px;
+    @include mx.flexbox(column, start, start); 
+    flex-grow: 1;
+    padding: 33px 0 352px 45px;
+    background-color: var(--tertiary-bg);
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 361px);
+      content: "";
+      width: 926px;
+      height: 338px;
+      background: url("../../images/svg/mobile.svg") no-repeat center;
+    }
+  }
+
+  .step-two__info {
+    margin-bottom: 24px;
+    @include mx.typography(
+      inherit,
+      400,
+      30px,
+      150%,
+      center,
+      var(--fourthiary-text-color)
+    );
+  }
+
+  .step-two__title-wrapper {
+    max-width: 623px;
+    width: 100%;
+  }
+
+  .step-two__title {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      600,
+      80px,
+      150%,
+      start,
+      var(--tertiary-text-color)
+    );
+  }
+
+  .step-two__title-span {
+    display: flex;
+    color: var(--main-text-color); 
+  }
+
+  .step-two__title-span--first {
+    line-height: 95%;
+  }
+
+  .step-two__collect {
+    position: relative;
+    @include mx.flexbox(column, start, start);
+    flex-grow: 1; 
+    min-width: 854px;
+    padding: 34px 0 212px 30px;
+    background-color: var(--tertiary-bg);
+  }
+
+  .step-two__info--second {
+    margin-bottom: 96px;
+  }
+
+  .step-two__title-wrapper--second {
+    max-width: 415px;
+  }
+
+  .step-two__title--second {
+    line-height: 117%;
+  }
+
+  .step-two__btn {
+    width: 283px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    @include mx.typography(
+      inherit,
+      500,
+      20px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+    background-color: var(--main-active-color);
+    border-radius: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .step--three {
+    max-width: 1109px;
+    padding-bottom: 189px;
+  }
+
+  .step__title--three {
+    font-weight: 500; 
+    line-height: 130%;
+  }
+
+  .step__desc-wrapper--three {
+    max-width: 920px;
+    width: 100%;
+  }
+
+  .step__desc-wrapper--three {
+    margin-bottom: 0;
+  }
+
+  .step-odd--three {
+    background: url("../../images/png/section2bg.png") no-repeat calc(50% + 500px) calc(-8px);
+    background-size: 820px 680px;
+    padding-bottom: 189px;
+  }
+
+  .step-odd__title-wrapper--three {
+    max-width: 698px;
+    width: 100%;
+  }
+  
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}

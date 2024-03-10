@@ -1,0 +1,41 @@
+@use "../mixins" as mx;
+
+@media only screen {
+  .claim {
+    padding-top: 304px;
+    padding-bottom: 288px;
+    background: url("../../images/png/section4bg.png") no-repeat center;
+  }
+  .claim__wrapper {
+    @include mx.flexbox(column, center, center);
+    gap: 52px;
+    width: 100%;
+  }
+
+  .claim__title-wrapper {
+    max-width: 1236px;
+    width: 100%;
+  }
+
+  .claim__title {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      600,
+      70px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}

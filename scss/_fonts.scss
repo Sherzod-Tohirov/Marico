@@ -1,0 +1,35 @@
+
+/*Main font family */
+
+@font-face {
+    font-family: "Poppins"; 
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/Poppins/regular.woff2") format("woff2"),
+         url("../fonts/Poppins/regular.woff") format("woff");
+}
+   
+@font-face {
+    font-family: "Poppins"; 
+    font-weight: 500;
+    font-display: swap;
+    src: url("../fonts/Poppins/medium.woff2") format("woff2"),
+         url("../fonts/Poppins/medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins"; 
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/Poppins/semibold.woff2") format("woff2"),
+         url("../fonts/Poppins/semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins"; 
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/Poppins/bold.woff2") format("woff2"),
+         url("../fonts/Poppins/bold.woff") format("woff");
+}
+

@@ -1,0 +1,105 @@
+@use "../mixins" as mx;
+
+@media only screen {
+  .site-header {
+    padding-top: 46px;
+  }
+
+  .site-header__wrapper {
+    @include mx.flexbox(row, center, space-between);
+  }
+
+  .site-header__list {
+    @include mx.list-unstyled;
+    @include mx.flexbox(row, center, center);
+  }
+
+  .site-header__item {
+    &:first-child {
+      margin-right: 19px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 39px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 38px;
+    }
+  }
+
+  .site-header__link {
+    @include mx.typography(
+      inherit,
+      500,
+      20px,
+      150%,
+      center,
+      var(--secondary-text-color)
+    );
+    text-decoration: none;
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--main-active-color);
+    }
+  }
+
+  .active-link {
+    color: var(--main-active-color) !important;
+  }
+
+  .dropdown-link {
+    @include mx.flexbox(row, center, center);
+    gap: 9px;
+
+    &::after {
+      content: "";
+      width: 11px;
+      height: 6px;
+      background: url("../../images/icons/arrdn.svg") no-repeat center;
+    }
+  }
+
+  .site-header__auth-list {
+    @include mx.list-unstyled;
+    @include mx.flexbox(row, center, center);
+    gap: 24px;
+  }
+
+  .site-header__auth-link {
+    @include mx.typography(
+      inherit,
+      500,
+      20px,
+      150%,
+      center,
+      var(--secondary-text-color)
+    );
+    text-decoration: none;
+  }
+
+  .sign-in-link {
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--main-active-color);
+    }
+  }
+
+  .sign-up-link {
+    min-width: 119px;
+    padding: 12px 20px 13px 22px;
+    color: var(--main-text-color);
+    background-color: var(--secondary-active-color);
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}

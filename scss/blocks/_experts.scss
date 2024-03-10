@@ -1,0 +1,38 @@
+@use "../mixins" as mx;
+
+@media only screen {
+  .experts {
+    padding-bottom: 189px;
+  }
+  .experts__wrapper {
+    @include mx.flexbox(column, center, center);
+    gap: 52px;
+    width: 100%;
+  }
+
+  .experts__title {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      600,
+      75px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .experts__img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}

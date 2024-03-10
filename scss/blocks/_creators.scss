@@ -1,0 +1,91 @@
+@use "../mixins" as mx;
+
+@media only screen {
+  .creators {
+    padding-bottom: 162px;
+  }
+
+  .creators__wrapper {
+    @include mx.flexbox(column, center, center);
+    max-width: 1485px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .creators__title {
+    margin-top: 0;
+    margin-bottom: 69px;
+    @include mx.typography(
+      inherit,
+      600,
+      75px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .creators__list {
+    @include mx.list-unstyled;
+    @include mx.flexbox(row, stretch, space-between);
+    gap: 107px;
+  }
+  .creators__item {
+    @include mx.flexbox(column, center, center);
+    &:first-child .creators__item-title::before {
+        background: url("../../images/icons/smile.svg") no-repeat center;
+    }
+
+    &:nth-child(2) .creators__item-title::before {
+        background: url("../../images/icons/happy.svg") no-repeat center;
+    }
+
+    &:nth-child(3) .creators__item-title::before {
+        background: url("../../images/icons/party.svg") no-repeat center;
+    }
+  }
+
+  .creators__item-title {
+    @include mx.flexbox(row, center, center);
+    gap: 8px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    @include mx.typography(
+      inherit,
+      600,
+      35px,
+      149%,
+      center,
+      var(--main-text-color)
+    );
+
+    &::before {
+        content: "";
+        width: 37px;
+        height: 37px;
+        background-size: 37px;
+    }
+  }
+
+  .creators__item-desc {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      600,
+      22px,
+      150%,
+      center,
+      var(--secondary-text-color)
+    );
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}

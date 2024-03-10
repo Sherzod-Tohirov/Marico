@@ -1,0 +1,121 @@
+@use "../mixins" as mx;
+
+@media only screen {
+  .started {
+    padding-top: 189px;
+    padding-bottom: 184px;
+  }
+  .started__wrapper {
+    @include mx.flexbox(column, center, center);
+    max-width: 879px;
+    width: 100%;
+    margin: 0 auto;
+
+    &::before {
+        width: 165px;
+        height: 155px;
+        background: url("../../images/icons/logo_icon.svg") no-repeat center;
+        margin-bottom: 21px;
+        content: "";
+    }
+  }
+
+  .started__title {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      700,
+      100px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .started__desc {
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include mx.typography(
+      inherit,
+      400,
+      43px,
+      149%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .started__btn {
+    width: 472px;
+    margin-bottom: 26px;
+    padding-top: 29px;
+    padding-bottom: 28px;
+    @include mx.typography(
+      inherit,
+      600,
+      30px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+    background-color: var(--main-active-color);
+    border-radius: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .started__info-wrapper {
+    @include mx.flexbox(row, center, center);
+  }
+
+  .started__info-dot {
+    @include mx.flexbox(row, center, center);
+    width: 37px;
+    height: 37px;
+    margin-right: 22px;
+    background-color: var(--main-dot-color-opacity);
+    border-radius: 50%;
+
+    &::before {
+        @include mx.flexbox(row, center, center);
+        content: '';
+        width: 22px;
+        height: 22px;
+        background-color: var(--main-dot-color);
+        border-radius: 50%;
+    }
+  }
+
+  .started__info-text {
+    @include mx.typography(
+      inherit,
+      700,
+      38px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+    margin-right: 11px;
+  }
+
+  .started__info-desc {
+    @include mx.typography(
+        inherit,
+        400,
+        38px,
+        normal,
+        center,
+        var(--secondary-text-color)
+      );
+  }
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}

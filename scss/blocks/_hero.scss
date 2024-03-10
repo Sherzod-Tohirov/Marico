@@ -1,0 +1,140 @@
+@use "../mixins" as mx;
+
+@media only screen {
+  .hero {
+    padding-top: 129px;
+    padding-bottom: 188px;
+  }
+
+  .hero__wrapper {
+    @include mx.flexbox(column, center, center);
+  }
+
+  .hero__title-wrapper {
+    margin-bottom: 137px;
+  }
+
+  .hero__title {
+    @include mx.remove-margin;
+    @include mx.typography(
+      inherit,
+      700,
+      112px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .hero__title-span {
+    @include mx.flexbox(column, center, center);
+    background: linear-gradient(90deg, #fe6783 1.9%, #ffbf84 97.1%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero__details-wrapper {
+    @include mx.flexbox(column, center, center);
+    max-width: 694px;
+    width: 100%;
+  }
+
+  .hero__details-title {
+    @include mx.flexbox(row, center, center);
+    @include mx.typography(
+      inherit,
+      500,
+      40px,
+      150%,
+      center,
+      var(--main-text-color)
+    );
+    margin-bottom: 50px;
+  }
+
+  .hero__details-btn-wrapper {
+    @include mx.flexbox(row, stretch, center);
+    gap: 26px;
+    margin-bottom: 21px;
+  }
+
+  .hero__btn {
+    width: 313px;
+    border-radius: 14px;
+    @include mx.typography(
+      inherit,
+      500,
+      20px,
+      150%,
+      center,
+      var(--secondary-text-color)
+    );
+    cursor: pointer;
+  }
+
+  .get-started-btn {
+    padding: 23px;
+    color: var(--main-text-color);
+    background-color: var(--main-active-color);
+    border: 1px solid transparent;
+  }
+
+  .view-demo-btn {
+    padding: 24px;
+    background-color: transparent;
+    border: 1px solid var(--secondary-text-color);
+  }
+
+  .hero__info-wrapper {
+    @include mx.flexbox(row, center, center);
+    gap: 9px;
+  }
+
+  .hero__info-dot {
+    @include mx.flexbox(row, center, center);
+    width: 29px;
+    height: 29px;
+    background-color: var(--main-dot-color-opacity);
+    border-radius: 50%;
+
+    &::before {
+        @include mx.flexbox(row, center, center);
+        content: '';
+        width: 17px;
+        height: 17px;
+        background-color: var(--main-dot-color);
+        border-radius: 50%;
+    }
+  }
+
+  .hero__info-text {
+    @include mx.typography(
+      inherit,
+      500,
+      25px,
+      152%,
+      center,
+      var(--main-text-color)
+    );
+  }
+
+  .hero__info-desc {
+    @include mx.typography(
+        inherit,
+        500,
+        25px,
+        normal,
+        center,
+        var(--secondary-text-color)
+      );
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
