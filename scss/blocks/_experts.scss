@@ -28,10 +28,23 @@
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
+  .experts__title {
+    font-size: 60px;
+  }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (max-width: 540px) {
+  .experts {
+    padding-bottom: 89px;
+  }
+  .experts__title {
+    font-size: 36px;
+  }
+
+  .experts__img {
+    object-fit: cover;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

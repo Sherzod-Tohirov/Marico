@@ -33,15 +33,15 @@
   .creators__item {
     @include mx.flexbox(column, center, center);
     &:first-child .creators__item-title::before {
-        background: url("../../images/icons/smile.svg") no-repeat center;
+      background: url("../../images/icons/smile.svg") no-repeat center;
     }
 
     &:nth-child(2) .creators__item-title::before {
-        background: url("../../images/icons/happy.svg") no-repeat center;
+      background: url("../../images/icons/happy.svg") no-repeat center;
     }
 
     &:nth-child(3) .creators__item-title::before {
-        background: url("../../images/icons/party.svg") no-repeat center;
+      background: url("../../images/icons/party.svg") no-repeat center;
     }
   }
 
@@ -60,10 +60,10 @@
     );
 
     &::before {
-        content: "";
-        width: 37px;
-        height: 37px;
-        background-size: 37px;
+      content: "";
+      width: 37px;
+      height: 37px;
+      background-size: 37px;
     }
   }
 
@@ -81,10 +81,40 @@
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
+  .creators__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+@media only screen and (max-width: 980px) {
+  .creators__title {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .creators__title {
+    font-size: 48px;
+  }
+  .creators__list {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .creators__item-title {
+    font-size: 25px;
+  }
+
+  .creators__item-desc {
+    font-size: 18px;
+    white-space: wrap;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

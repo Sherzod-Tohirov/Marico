@@ -11,7 +11,6 @@
     width: 100%;
     padding-bottom: 191px;
     margin: 0 auto;
-    
   }
 
   .step__id {
@@ -77,7 +76,8 @@
     padding-left: 43px;
     padding-bottom: 189px;
     gap: 80px;
-    background: url("../../images/png/section1bg.png") no-repeat calc(50% + 500px) calc(-8px);
+    background: url("../../images/png/section1bg.png") no-repeat
+      calc(50% + 500px) calc(-8px);
     background-size: 820px 715px;
   }
 
@@ -216,7 +216,7 @@
   .step-two__link {
     position: relative;
     min-width: 854px;
-    @include mx.flexbox(column, start, start); 
+    @include mx.flexbox(column, start, start);
     flex-grow: 1;
     padding: 33px 0 352px 45px;
     background-color: var(--tertiary-bg);
@@ -263,7 +263,7 @@
 
   .step-two__title-span {
     display: flex;
-    color: var(--main-text-color); 
+    color: var(--main-text-color);
   }
 
   .step-two__title-span--first {
@@ -273,7 +273,7 @@
   .step-two__collect {
     position: relative;
     @include mx.flexbox(column, start, start);
-    flex-grow: 1; 
+    flex-grow: 1;
     min-width: 854px;
     padding: 34px 0 212px 30px;
     background-color: var(--tertiary-bg);
@@ -315,7 +315,7 @@
   }
 
   .step__title--three {
-    font-weight: 500; 
+    font-weight: 500;
     line-height: 130%;
   }
 
@@ -329,7 +329,8 @@
   }
 
   .step-odd--three {
-    background: url("../../images/png/section2bg.png") no-repeat calc(50% + 500px) calc(-8px);
+    background: url("../../images/png/section2bg.png") no-repeat
+      calc(50% + 500px) calc(-8px);
     background-size: 820px 680px;
     padding-bottom: 189px;
   }
@@ -338,14 +339,195 @@
     max-width: 698px;
     width: 100%;
   }
-  
-
 }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
+  .step-two__link {
+    min-width: 50%;
+    }
+
+  .step-two__collect {
+    min-width: 50%;
+  }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (max-width: 980px) {
+  .step__title {
+    font-size: 60px;
+  }
+
+  .step__desc-wrapper {
+    max-width: 680px;
+  }
+
+  .step__desc {
+    font-size: 24px;
+  }
+
+  .step__btn {
+    width: 260px;
+    padding: 24px 6px;
+    font-size: 18px;
+  }
+
+  .step-odd {
+    background: url("../../images/png/section1bg.png") no-repeat
+      calc(50% + 250px) calc(-8px);
+    background-size: 420px 360px;
+  }
+
+  .step-odd--three {
+    background: url("../../images/png/section2bg.png") no-repeat
+      calc(50% + 250px) calc(-8px);
+    background-size: 420px 360px;
+    padding-bottom: 189px;
+  }
+
+  .step-odd__info {
+    font-size: 24px;
+  }
+
+  .step-odd__title-wrapper {
+    max-width: 500px;
+  }
+
+  .step-odd__title {
+    font-size: 50px;
+  }
+
+  .step-odd__item {
+    font-size: 18px;
+  }
+
+  .step-odd__btn {
+    width: 190px;
+    font-size: 17px;
+  }
+
+  .step-two__info {
+    font-size: 24px;
+  }
+
+  .step-two__link {
+    min-width: 50%;
+    padding-bottom: 280px;
+  }
+
+  .step-two__collect {
+    min-width: 50%;
+    padding-bottom: 180px;
+  }
+
+  .step-two__title {
+    font-size: 58px;
+  }
+
+  .step-two__link {
+    &::after {
+      bottom: -68px;
+      left: calc(50% - 230px);
+      width: 550px;
+      background-size: contain;
+    }
+  }
+
+  .step-two__btn {
+    width: 230px;
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .step__title {
+    font-size: 48px;
+  }
+
+  .step__desc-wrapper {
+    max-width: 480px;
+  }
+
+  .step__desc {
+    font-size: 18px;
+  }
+
+  .step__btn {
+    width: 240px;
+    padding: 20px 6px;
+    font-size: 18px;
+  }
+
+  .step-odd {
+    padding-left: 0;
+    background: url("../../images/png/section1bg.png") no-repeat
+      calc(50% + 100px) calc(-8px);
+    background-size: 180px 140px;
+  }
+
+  .step-odd--three {
+    background: url("../../images/png/section2bg.png") no-repeat
+      calc(50% + 100px) calc(-8px);
+    background-size: 180px 140px;
+    padding-bottom: 149px;
+  }
+
+  .step-odd__info {
+    font-size: 18px;
+  }
+
+  .step-odd__title-wrapper {
+    max-width: 300px;
+  }
+
+  .step-odd__title {
+    font-size: 32px;
+  }
+
+  .step-odd__item {
+    font-size: 12px;
+  }
+
+  .step-odd__btn {
+    width: 160px;
+    font-size: 15px;
+  }
+
+  .step-two {
+    padding-bottom: 144px;
+    gap: 14px;
+  }
+
+  .step-two__info {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .step-two__link {
+    min-width: 50%;
+    padding-bottom: 100px;
+  }
+
+  .step-two__collect {
+    min-width: 50%;
+    padding-bottom: 100px;
+  }
+
+  .step-two__title {
+    font-size: 28px;
+  }
+
+  .step-two__link {
+    &::after {
+      bottom: -130px;
+      left: calc(50% - 100px);
+      width: 230px;
+      background-size: contain;
+    }
+  }
+
+  .step-two__btn {
+    width: 230px;
+    padding: 20px 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

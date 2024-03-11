@@ -12,11 +12,11 @@
     margin: 0 auto;
 
     &::before {
-        width: 165px;
-        height: 155px;
-        background: url("../../images/icons/logo_icon.svg") no-repeat center;
-        margin-bottom: 21px;
-        content: "";
+      width: 165px;
+      height: 155px;
+      background: url("../../images/icons/logo_icon.svg") no-repeat center;
+      margin-bottom: 21px;
+      content: "";
     }
   }
 
@@ -77,12 +77,12 @@
     border-radius: 50%;
 
     &::before {
-        @include mx.flexbox(row, center, center);
-        content: '';
-        width: 22px;
-        height: 22px;
-        background-color: var(--main-dot-color);
-        border-radius: 50%;
+      @include mx.flexbox(row, center, center);
+      content: "";
+      width: 22px;
+      height: 22px;
+      background-color: var(--main-dot-color);
+      border-radius: 50%;
     }
   }
 
@@ -100,21 +100,62 @@
 
   .started__info-desc {
     @include mx.typography(
-        inherit,
-        400,
-        38px,
-        normal,
-        center,
-        var(--secondary-text-color)
-      );
+      inherit,
+      400,
+      38px,
+      normal,
+      center,
+      var(--secondary-text-color)
+    );
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .started__title {
+    font-size: 60px;
   }
 
+  .started__desc {
+    font-size: 32px;
+  }
+
+  .started__btn {
+    width: 320px;
+    font-size: 24px;
+    padding: 25px;
+  }
+
+  .started__info-desc {
+    font-size: 24px;
+  }
+
+  .started__info-text {
+    font-size: 24px;
+  }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
-}
+@media only screen and (max-width: 540px) {
+  .started__title {
+    font-size: 36px;
+  }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .started__desc {
+    font-size: 24px;
+  }
+
+  .started__btn {
+    width: 200px;
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .started__info-desc {
+    font-size: 18px;
+  }
+
+  .started__info-text {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
