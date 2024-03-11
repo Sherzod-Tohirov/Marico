@@ -26,13 +26,10 @@ function resizeByScreen() {
     removeWrapperHeader(elHeaderWrapper);
     hideBar(elBarMenu);
   }
-
-  if (closeBtn) {
+  if (wrapper) {
     const elCloseBtn = document.querySelector(".close-btn");
     elCloseBtn.addEventListener("click", (evt) => {
-      if (wrapper) {
-        removeHeader([elHeaderNav, elAuthWrapper, wrapper]);
-      }
+      removeHeader([elHeaderNav, elAuthWrapper, wrapper]);
     });
   }
 }
