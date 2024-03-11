@@ -27,7 +27,7 @@ function resizeByScreen() {
     hideBar(elBarMenu);
   }
 
-  if (btn) {
+  if (closeBtn) {
     const elCloseBtn = document.querySelector(".close-btn");
     elCloseBtn.addEventListener("click", (evt) => {
       if (wrapper) {
